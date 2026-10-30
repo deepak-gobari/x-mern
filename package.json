@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
   "scripts": {
-    "dev": "npm run dev --prefix backend",
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "build": "npm run build --workspace=frontend",
+    "start": "npm run start --workspace=backend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^1.21.0",
-    "react-icons": "^5.7.0"
+  "devDependencies": {
+    "concurrently": "^10.0.6"
   }
 }
