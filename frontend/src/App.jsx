@@ -15,7 +15,7 @@ function App() {
   const fetchTodos = async () => {
     try {
       const response = await axios.get("/api/todos");
-      console.log("Fetched todos:", response.data);
+      // console.log("Fetched todos:", response.data);
       setAllTodos(response.data);
     } catch (error) {
       console.log("Error fetching todos:", error);
