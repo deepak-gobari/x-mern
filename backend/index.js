@@ -1,15 +1,16 @@
 import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
+import todoRoutes from "./routes/todo.routes.js";
 
 dotenv.config();
 
 const app = express();
 const port = 5000;
 
-app.get("/", (req, res) => {
-  res.send("Server Ready");
-});
+app.use(express.json());
+
+app.use("/api/todos", todoRoutes);
 
 app.listen(port, () => {
   connectDB();
