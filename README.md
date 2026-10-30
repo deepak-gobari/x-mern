@@ -1,11 +1,48 @@
-``
---workspace=frontend
+# MERN Stack Project
 
-``
+## Workspaces:
 
-use this prefix in root after any script so all will happen in correct workspace
+- `frontend`
+- `backend`
+ 
+## Development
 
-``
-npm run build --workspace=frontend
+Start both frontend and backend servers:
 
-``
+```bash
+npm run dev
+```
+
+Start each application separately:
+
+```bash
+npm run dev -w frontend
+npm run dev -w backend
+```
+
+## Production
+
+Build the frontend:
+
+```bash
+npm run build
+```
+
+Start the production backend server:
+
+```bash
+npm start
+```
+
+## Installing Dependencies 
+
+**Backend:**
+```bash
+npm install express cors dotenv -w backend
+```
+
+**Frontend:**
+```bash
+npm install axios react-icons -w frontend
+```
+
