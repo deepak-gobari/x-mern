@@ -6,8 +6,11 @@
 - `backend`
  
 ## Development
-
-Start both frontend and backend servers:
+- Create .env file
+- Copy from .env.sample
+- Fill is custom datat
+- Paste MongoDB URI to
+- Start both frontend and backend servers
 
 ```bash
 npm run dev
