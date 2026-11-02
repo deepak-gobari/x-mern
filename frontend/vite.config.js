@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => {
   return {
     envDir: rootDir,
     plugins: [react(), tailwindcss()],
+    // cacheDir: path.resolve(rootDir, "node_modules/.vite"), if vite make cache in root folder rather than current folder
     server: {
       proxy: {
         "/api": {
