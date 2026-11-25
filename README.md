@@ -41,7 +41,7 @@ npm start
 
 **Backend:**
 ```bash
-npm install express cors dotenv -w backend
+npm install express cors -w backend
 ```
 
 **Frontend:**
